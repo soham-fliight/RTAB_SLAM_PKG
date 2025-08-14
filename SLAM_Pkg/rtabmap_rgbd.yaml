@@ -1,9 +1,13 @@
 rtabmap:
   ros__parameters:
+    # ROS-native params
     subscribe_rgbd: true
     frame_id: "camera_color_optical_frame"
+    qos_image: 2            # RELIABLE
+    qos_camera_info: 2
+
+    # RTAB-Map params (string-typed; keep them quoted)
     Rtabmap/DetectionRate: "10.0"
     RGBD/MinDepth: "0.2"
     RGBD/MaxDepth: "20.0"
     RGBD/NeighborLinkRefining: "true"
-
